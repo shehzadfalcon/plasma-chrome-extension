@@ -97,8 +97,8 @@ const Popup = () => {
   return (
     <div className="popup-container">
       <div className="header">
-        <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" alt="GoPDF" className="logo" />
-        <h1>GoPDF Actions</h1>
+        <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" alt="PDFWizard" className="logo" />
+        <h1>PDFWizard Actions</h1>
       </div>
 
       <div

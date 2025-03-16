@@ -1,4 +1,4 @@
-# GoPDF Chrome Extension
+# PDFWizard Chrome Extension
 
 A powerful Chrome extension for PDF manipulation built with the [Plasmo Framework](https://docs.plasmo.com/).
 
@@ -14,7 +14,7 @@ A powerful Chrome extension for PDF manipulation built with the [Plasmo Framewor
 
 ### From Chrome Web Store
 
-1. Visit the GoPDF extension page on the Chrome Web Store
+1. Visit the PDFWizard extension page on the Chrome Web Store
 2. Click "Add to Chrome"
 3. Follow the onboarding instructions
 
@@ -22,10 +22,10 @@ A powerful Chrome extension for PDF manipulation built with the [Plasmo Framewor
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/gopdf-extension.git
+git clone https://github.com/shehzadfalcon/plasma-chrome-extension
 
 # Navigate to project directory
-cd gopdf-extension
+cd plasma-chrome-extension
 
 # Install dependencies
 npm install
@@ -46,16 +46,16 @@ After building, load the extension from `build/chrome-mv3-dev` using Chrome's de
 
 ### Process PDFs from Your Browser
 
-1. Click the GoPDF icon in your toolbar
+1. Click the PDFWizard icon in your toolbar
 2. Upload a PDF by:
    - Dragging and dropping it into the designated area
    - Clicking "Choose File" to select from your computer
 3. Select the action you want to perform
-4. The extension will redirect you to gopdf.io with your file ready for processing
+4. The extension will redirect you to PDFWizard.io with your file ready for processing
 
 ### Access Tools Directly
 
-1. Click the GoPDF icon
+1. Click the PDFWizard icon
 2. Select any tool from the action grid:
    - 🗜️ Compress PDF
    - 🔗 Merge PDF
@@ -67,7 +67,7 @@ After building, load the extension from `build/chrome-mv3-dev` using Chrome's de
 ### Process PDFs You're Viewing
 
 When browsing a PDF in Chrome:
-1. The GoPDF icon will display a "PDF" badge
+1. The PDFWizard icon will display a "PDF" badge
 2. A sidebar will appear with quick actions
 3. Select any action to process the current PDF
 
@@ -100,7 +100,7 @@ pnpm package
 For troubleshooting:
 1. Open Chrome and navigate to `chrome://extensions`
 2. Enable "Developer mode"
-3. Click on "background page" under the GoPDF extension
+3. Click on "background page" under the PDFWizard extension
 4. Use Chrome DevTools to debug
 
 ## Known Issues
