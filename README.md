@@ -1,33 +1,116 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# GoPDF Chrome Extension
 
-## Getting Started
+A powerful Chrome extension for PDF manipulation built with the [Plasmo Framework](https://docs.plasmo.com/).
 
-First, run the development server:
+## Features
+
+- **PDF Upload**: Drag and drop PDFs directly in the extension popup
+- **Conversion Tools**: Convert PDFs to JPG, Word, and more
+- **PDF Manipulation**: Compress, merge, crop, and OCR your PDFs
+- **Smart PDF Detection**: Automatically detects PDFs you're viewing
+- **Quick Actions**: Access common PDF tools with just one click
+
+## Installation
+
+### From Chrome Web Store
+
+1. Visit the GoPDF extension page on the Chrome Web Store
+2. Click "Add to Chrome"
+3. Follow the onboarding instructions
+
+### From Source
 
 ```bash
-pnpm dev
+# Clone the repository
+git clone https://github.com/yourusername/gopdf-extension.git
+
+# Navigate to project directory
+cd gopdf-extension
+
+# Install dependencies
+npm install
 # or
+pnpm install
+
+# Build for development
 npm run dev
+# or
+pnpm dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+After building, load the extension from `build/chrome-mv3-dev` using Chrome's developer mode.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+## Usage
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+### Process PDFs from Your Browser
 
-## Making production build
+1. Click the GoPDF icon in your toolbar
+2. Upload a PDF by:
+   - Dragging and dropping it into the designated area
+   - Clicking "Choose File" to select from your computer
+3. Select the action you want to perform
+4. The extension will redirect you to gopdf.io with your file ready for processing
 
-Run the following:
+### Access Tools Directly
+
+1. Click the GoPDF icon
+2. Select any tool from the action grid:
+   - 🗜️ Compress PDF
+   - 🔗 Merge PDF
+   - ✂️ PDF to JPG
+   - 🔄 PDF to Word
+   - ✏️ Crop PDF
+   - 🔒 OCR PDF
+
+### Process PDFs You're Viewing
+
+When browsing a PDF in Chrome:
+1. The GoPDF icon will display a "PDF" badge
+2. A sidebar will appear with quick actions
+3. Select any action to process the current PDF
+
+## Development
+
+This extension is built with the Plasmo Framework, making it easy to develop and maintain.
+
+### Project Structure
+
+- `popup.tsx` - Main extension popup UI
+- `background.ts` - Background service worker
+- `content.tsx` - PDF detection and action sidebar
+- `onboarding.tsx` - First-time user onboarding experience
+
+### Development Commands
 
 ```bash
+# Start development server
+pnpm dev
+
+# Build for production
 pnpm build
-# or
-npm run build
+
+# Package for distribution
+pnpm package
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+### Debugging
 
-## Submit to the webstores
+For troubleshooting:
+1. Open Chrome and navigate to `chrome://extensions`
+2. Enable "Developer mode"
+3. Click on "background page" under the GoPDF extension
+4. Use Chrome DevTools to debug
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+## Known Issues
+
+- Ensure the actions in both handlers use the same URL format
+- There's a known bug with PDF detection in certain embedded viewers
+- When file upload redirects don't work, check for extension context invalidation
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for bugs and feature requests.
+
+## License
+
+This project is licensed under the MIT License.

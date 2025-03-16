@@ -25,10 +25,15 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "*://*/*"
     ],
     "permissions": [
-      "tabs"
-    ]
+      "tabs",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
   }
 }

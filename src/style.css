@@ -1,15 +1,248 @@
-.new-tab {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+/* style.css */
+:root {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6483f8;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --background-color: #f9f9f9;
+  --hover-color: #eef2ff;
+}
+
+.popup-container {
+  width: 350px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.drop-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drop-area.dragging {
+  background-color: var(--hover-color);
+  border-color: var(--primary-color);
+}
+
+.upload-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: #333;
-  display: block;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.file-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+}
+
+.file-icon {
+  font-size: 24px;
+}
+
+.file-name {
+  flex: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+}
+
+.remove-button:hover {
+  color: #666;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: var(--hover-color);
+  border-color: var(--primary-color);
+}
+
+.action-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.action-label {
+  font-size: 13px;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
   font-size: 12px;
-  line-height: 16px;
-  margin: 0 0 10px;
-  padding: 10px;
-  position: relative;
-  text-decoration: none;
+  color: #888;
+}
+
+.new-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+
+
+.main .input-field {
   width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.main .input-field:focus {
+  border-color: #4a6cf7;
+}
+
+/* src/onboarding.css */
+
+.onboarding-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboarding-popup {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+.onboarding-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.onboarding-step {
+  margin-bottom: 20px;
+}
+
+.onboarding-step-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4a6cf7;
+}
+
+.onboarding-step-text {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.onboarding-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.onboarding-button {
+  background-color: #4a6cf7;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.onboarding-button:hover {
+  background-color: #3a54d7;
 }
