@@ -37,6 +37,8 @@ npm run dev
 # or
 pnpm dev
 ```
+## Visualize
+<img width="1353" alt="Screenshot 2025-03-17 at 4 11 55 AM" src="https://github.com/user-attachments/assets/1ac48623-130d-4543-983c-420e5861099b" />
 
 After building, load the extension from `build/chrome-mv3-dev` using Chrome's developer mode.
 
@@ -110,6 +112,11 @@ For troubleshooting:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for bugs and feature requests.
+
+## Stay in touch
+
+- Author - [Shahzad Ahmad]
+- LinkedIn - [https://www.linkedin.com/in/shehzadcs2016/](https://www.linkedin.com/in/shehzadcs2016/)
 
 ## License
 
